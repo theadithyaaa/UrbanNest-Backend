@@ -1,0 +1,9 @@
+spring:
+  datasource:
+    url: jdbc:mysql://localhost:3306/urbannest
+    username: root
+    password: 123456789
+
+  jpa:
+    hibernate:
+      ddl-auto: create

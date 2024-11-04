@@ -1,6 +1,5 @@
 package edu.icet.controller;
 
-import edu.icet.dto.Customer;
 import edu.icet.dto.Property;
 import edu.icet.service.PropertyService;
 import lombok.RequiredArgsConstructor;
@@ -38,7 +37,7 @@ public class PropertyController {
     public void deletePropertyById(@PathVariable Integer id){
         service.deletepropertyById(id);
     }
-    @PutMapping("/update-customer")
+    @PutMapping("/update-property")
     @ResponseStatus(HttpStatus.ACCEPTED)
     public void updateProperty(@RequestBody Property property){
         service.updatePropertyById(property);
