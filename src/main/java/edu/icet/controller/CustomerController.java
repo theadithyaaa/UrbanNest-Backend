@@ -9,35 +9,35 @@ import org.springframework.web.bind.annotation.*;
 
 import java.util.List;
 
-@RequestMapping
+@RequestMapping ("/customer")
 @RestController
 @RequiredArgsConstructor
 public class CustomerController {
     @Autowired
     final CustomerService service;
 
-    @GetMapping("/get-all")
+    @GetMapping("/customer/get-all")
     public List<Customer> getCustomer(){
         return service.getAll();
     }
 
-    @PostMapping("/add-customer")
+    @PostMapping("/customer/add-customer")
     @ResponseStatus(HttpStatus.CREATED)
     public void addcustomer(@RequestBody Customer customer){
         service.addcustomer(customer);
     }
 
-    @GetMapping("/search-by-id/{id}")
+    @GetMapping("/customers/search-by-id/{id}")
     public Customer getCustomerById(@PathVariable Integer id){
         return service.searchcustomerById(id);
     }
 
-    @DeleteMapping("/delete-by-id/{id}")
+    @DeleteMapping("/customers/delete-by-id/{id}")
     @ResponseStatus(HttpStatus.ACCEPTED)
     public void deleteCustomerById(@PathVariable Integer id){
         service.deletecustomerById(id);
     }
-    @PutMapping("/update-customer")
+    @PutMapping("/customers/update-customer")
     @ResponseStatus(HttpStatus.ACCEPTED)
     public void updateCustomer(@RequestBody Customer customer){
         service.updatecustomerById(customer);

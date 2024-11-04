@@ -10,34 +10,34 @@ import org.springframework.web.bind.annotation.*;
 import java.util.List;
 
 @RestController
-@RequestMapping
+@RequestMapping ("/property")
 @RequiredArgsConstructor
 public class PropertyController {
     @Autowired
     final PropertyService service;
 
-    @GetMapping("/get-all")
+    @GetMapping("/property/get-all")
     public List<Property>getProperty(){
         return service.getAll();
     }
 
-    @PostMapping("/add-property")
+    @PostMapping("/property/add-property")
     @ResponseStatus(HttpStatus.CREATED)
     public void addproperty(@RequestBody Property property){
         service.addproperty(property);
     }
 
-    @GetMapping("/search-by-id/{id}")
+    @GetMapping("/property/search-by-id/{id}")
     public Property getPropertyById(@PathVariable Integer id){
         return service.searchpropertyById(id);
     }
 
-    @DeleteMapping("/delete-by-id/{id}")
+    @DeleteMapping("/property/delete-by-id/{id}")
     @ResponseStatus(HttpStatus.ACCEPTED)
     public void deletePropertyById(@PathVariable Integer id){
         service.deletepropertyById(id);
     }
-    @PutMapping("/update-property")
+    @PutMapping("/property/update-property")
     @ResponseStatus(HttpStatus.ACCEPTED)
     public void updateProperty(@RequestBody Property property){
         service.updatePropertyById(property);
