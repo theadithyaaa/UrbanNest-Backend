@@ -1,5 +1,6 @@
 package edu.icet.dto;
 
+import jakarta.persistence.Id;
 import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.NoArgsConstructor;
@@ -10,6 +11,7 @@ import lombok.ToString;
 @NoArgsConstructor
 @ToString
 public class Login {
+    private Integer id;
     private String email;
     private String password;
 }

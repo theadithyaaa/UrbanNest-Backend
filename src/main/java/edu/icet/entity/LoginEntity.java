@@ -15,6 +15,7 @@ import lombok.ToString;
 public class LoginEntity {
     @Id
     @GeneratedValue(strategy = GenerationType.AUTO)
+    private Integer id;
     private String email;
     private String password;
 }
