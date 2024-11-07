@@ -1,7 +1,6 @@
 package edu.icet.service;
 
 import edu.icet.dto.Property;
-import edu.icet.entity.CustomerEntity;
 import edu.icet.entity.PropertyEntity;
 import edu.icet.repository.PropertyRepository;
 import lombok.RequiredArgsConstructor;

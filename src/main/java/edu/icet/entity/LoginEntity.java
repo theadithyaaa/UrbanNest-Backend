@@ -11,15 +11,10 @@ import lombok.ToString;
 @NoArgsConstructor
 @ToString
 @Entity
-@Table( name = "property")
-public class PropertyEntity {
+@Table(name = "login")
+public class LoginEntity {
     @Id
     @GeneratedValue(strategy = GenerationType.AUTO)
-    private Integer id;
-    private String owner;
-    private String ownerContact;
-    private String location;
-    private String district;
-    private Double price;
-    private String type;
+    private String email;
+    private String password;
 }

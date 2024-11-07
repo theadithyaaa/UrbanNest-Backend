@@ -16,4 +16,6 @@ public class Property {
     private String location;
     private String district;
     private Double price;
+    private String type;
+
 }
