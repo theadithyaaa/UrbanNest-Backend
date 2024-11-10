@@ -12,32 +12,33 @@ import java.util.List;
 @RequestMapping ("/customer")
 @RestController
 @RequiredArgsConstructor
+@CrossOrigin
 public class CustomerController {
     @Autowired
     final CustomerService service;
 
-    @GetMapping("/customer/get-all")
+    @GetMapping("/get-all")
     public List<Customer> getCustomer(){
         return service.getAll();
     }
 
-    @PostMapping("/customer/add-customer")
+    @PostMapping("/add-customer")
     @ResponseStatus(HttpStatus.CREATED)
     public void addcustomer(@RequestBody Customer customer){
         service.addcustomer(customer);
     }
 
-    @GetMapping("/customers/search-by-id/{id}")
+    @GetMapping("/search-by-id/{id}")
     public Customer getCustomerById(@PathVariable Integer id){
         return service.searchcustomerById(id);
     }
 
-    @DeleteMapping("/customers/delete-by-id/{id}")
+    @DeleteMapping("/delete-by-id/{id}")
     @ResponseStatus(HttpStatus.ACCEPTED)
     public void deleteCustomerById(@PathVariable Integer id){
         service.deletecustomerById(id);
     }
-    @PutMapping("/customers/update-customer")
+    @PutMapping("/update-customer")
     @ResponseStatus(HttpStatus.ACCEPTED)
     public void updateCustomer(@RequestBody Customer customer){
         service.updatecustomerById(customer);

@@ -12,16 +12,17 @@ import java.util.List;
 @RequestMapping("/login")
 @RestController
 @RequiredArgsConstructor
+@CrossOrigin
 public class LoginController {
     @Autowired
     final LoginService service;
 
-    @GetMapping("/login/get-all")
+    @GetMapping("/get-all")
     public List<Login> getLogin(){
         return service.getAll();
     }
 
-    @PostMapping("/login/add-login")
+    @PostMapping("/add-login")
     @ResponseStatus(HttpStatus.CREATED)
     public void addlogin(@RequestBody Login login){
         service.addlogin(login);

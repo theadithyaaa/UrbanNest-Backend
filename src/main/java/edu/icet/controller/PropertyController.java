@@ -12,32 +12,33 @@ import java.util.List;
 @RestController
 @RequestMapping ("/property")
 @RequiredArgsConstructor
+@CrossOrigin
 public class PropertyController {
     @Autowired
     final PropertyService service;
 
-    @GetMapping("/property/get-all")
+    @GetMapping("/get-all")
     public List<Property>getProperty(){
         return service.getAll();
     }
 
-    @PostMapping("/property/add-property")
+    @PostMapping("/add-property")
     @ResponseStatus(HttpStatus.CREATED)
     public void addproperty(@RequestBody Property property){
         service.addproperty(property);
     }
 
-    @GetMapping("/property/search-by-id/{id}")
+    @GetMapping("/search-by-id/{id}")
     public Property getPropertyById(@PathVariable Integer id){
         return service.searchpropertyById(id);
     }
 
-    @DeleteMapping("/property/delete-by-id/{id}")
+    @DeleteMapping("/delete-by-id/{id}")
     @ResponseStatus(HttpStatus.ACCEPTED)
     public void deletePropertyById(@PathVariable Integer id){
         service.deletepropertyById(id);
     }
-    @PutMapping("/property/update-property")
+    @PutMapping("/update-property")
     @ResponseStatus(HttpStatus.ACCEPTED)
     public void updateProperty(@RequestBody Property property){
         service.updatePropertyById(property);
