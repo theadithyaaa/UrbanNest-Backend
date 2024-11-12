@@ -3,6 +3,7 @@ package edu.icet.controller;
 import edu.icet.dto.Property;
 import edu.icet.service.PropertyService;
 import lombok.RequiredArgsConstructor;
+import lombok.extern.slf4j.Slf4j;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
 import org.springframework.web.bind.annotation.*;
@@ -13,6 +14,7 @@ import java.util.List;
 @RequestMapping ("/property")
 @RequiredArgsConstructor
 @CrossOrigin
+@Slf4j
 public class PropertyController {
     @Autowired
     final PropertyService service;
@@ -23,8 +25,9 @@ public class PropertyController {
     }
 
     @PostMapping("/add-property")
-    @ResponseStatus(HttpStatus.CREATED)
+//    @ResponseStatus(HttpStatus.CREATED)
     public void addproperty(@RequestBody Property property){
+        log.info("waduna -> {}",property);
         service.addproperty(property);
     }
 

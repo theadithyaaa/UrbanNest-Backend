@@ -28,8 +28,8 @@ public class PropertyServiceImpl implements PropertyService{
 
     @Override
     public void addproperty(Property property) {
+        System.out.println(property);
         repository.save(mapper.map(property, PropertyEntity.class));
-
     }
 
     @Override
