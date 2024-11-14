@@ -14,7 +14,7 @@ import lombok.ToString;
 @Table( name = "property")
 public class PropertyEntity {
     @Id
-    @GeneratedValue(strategy = GenerationType.AUTO)
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Integer id;
     private String owner;
     private String ownerContact;

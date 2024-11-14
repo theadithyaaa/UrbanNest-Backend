@@ -14,7 +14,7 @@ import lombok.ToString;
 @Table(name = "customer")
 public class CustomerEntity {
     @Id
-    @GeneratedValue(strategy = GenerationType.AUTO)
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Integer id;
     private String name;
     private String contact;

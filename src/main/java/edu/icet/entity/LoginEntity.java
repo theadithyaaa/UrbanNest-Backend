@@ -14,7 +14,7 @@ import lombok.ToString;
 @Table(name = "login")
 public class LoginEntity {
     @Id
-    @GeneratedValue(strategy = GenerationType.AUTO)
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Integer id;
     private String email;
     private String password;

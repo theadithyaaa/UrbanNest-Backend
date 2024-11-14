@@ -27,7 +27,7 @@ public class PropertyController {
     @PostMapping("/add-property")
 //    @ResponseStatus(HttpStatus.CREATED)
     public void addproperty(@RequestBody Property property){
-        log.info("waduna -> {}",property);
+        log.info("updated-> {}",property);
         service.addproperty(property);
     }
 
