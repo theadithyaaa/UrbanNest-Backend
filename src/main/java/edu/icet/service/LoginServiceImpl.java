@@ -27,7 +27,7 @@ public class LoginServiceImpl implements LoginService{
     }
 
     @Override
-    public void addlogin(Login login) {
+    public void addLogin(Login login) {
         repository.save(mapper.map(login, LoginEntity.class));
     }
 
