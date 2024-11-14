@@ -24,7 +24,7 @@ public class LoginController {
 
     @PostMapping("/add-login")
     @ResponseStatus(HttpStatus.CREATED)
-    public void addlogin(@RequestBody Login login){
+    public void addLogin(@RequestBody Login login){
         service.addLogin(login);
     }
 }
