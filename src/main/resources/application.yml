@@ -8,3 +8,15 @@ spring:
     hibernate:
       ddl-auto: update
       show-sql: false
+
+  mail:
+    host: smtp.gmail.com
+    port: 587
+    username: urbannest.test@gmail.com
+    password: pamq aljo iovd udxp
+    properties:
+      mail:
+        smtp:
+          auth: true
+          starttls:
+            enable: true
