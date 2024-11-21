@@ -17,7 +17,6 @@ public class LoginEntity {
     @GeneratedValue(strategy = GenerationType.AUTO)
     private Integer id;
     private String name;
-    private String contact;
     private String email;
     private String password;
 }
