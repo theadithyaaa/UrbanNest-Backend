@@ -1,11 +1,13 @@
 package edu.icet.service;
 
 import edu.icet.dto.Login;
+import edu.icet.dto.LoginResponse;
 
 import java.util.List;
 
 public interface LoginService {
-    List<Login> getAll();
-    void addLogin(Login login);
+    LoginResponse loginUser(Login login);
+    String addLogin(Login login);
 
+    List<Login> getAll();
 }

@@ -1,8 +1,9 @@
-package edu.icet.service;
+package edu.icet.service.impl;
 
 import edu.icet.dto.Property;
 import edu.icet.entity.PropertyEntity;
 import edu.icet.repository.PropertyRepository;
+import edu.icet.service.PropertyService;
 import lombok.RequiredArgsConstructor;
 import org.modelmapper.ModelMapper;
 import org.springframework.stereotype.Service;
@@ -12,7 +13,7 @@ import java.util.List;
 
 @Service
 @RequiredArgsConstructor
-public class PropertyServiceImpl implements PropertyService{
+public class PropertyServiceImpl implements PropertyService {
 
     private final PropertyRepository repository;
     private final ModelMapper mapper;
